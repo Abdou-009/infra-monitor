@@ -1,7 +1,7 @@
 # 🖥️ DevOps Monitoring API
 
-![CI Pipeline](https://github.com/abdou-009/DevOps_Project/actions/workflows/ci.yml/badge.svg)
-![CD Pipeline](https://github.com/abdou-009/DevOps_Project/actions/workflows/cd.yml/badge.svg)
+![CI Pipeline](https://github.com/Abdou-009/infra-monitor/actions/workflows/ci.yml/badge.svg)
+![CD Pipeline](https://github.com/Abdou-009/infra-monitor/actions/workflows/cd.yml/badge.svg)
 
 A **production-ready REST API** for real-time system metrics monitoring, built with Python Flask, containerized with Docker, and deployed via **CI/CD pipeline** — with full **Prometheus + Grafana observability**.
 
@@ -177,8 +177,8 @@ git push ──→ GitHub Actions
 **Prerequisites:** [Docker](https://docs.docker.com/get-docker/) and [Git](https://git-scm.com/) installed.
 
 ```bash
-git clone https://github.com/Abdou-009/DevOps_Project.git
-cd DevOps_Project
+git clone https://github.com/Abdou-009/infra-monitor.git
+cd infra-monitor
 ```
 
 ### Option 1 — API Only
@@ -263,7 +263,7 @@ terraform plan
 ## 📁 Project Structure
 
 ```
-DevOps_Project/
+infra-monitor/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml                          # CI — lint, test, Docker build

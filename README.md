@@ -33,39 +33,7 @@ curl https://devops-lab-i12g.onrender.com/metrics
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────┐
-│              Developer Machine              │
-│                                             │
-│   git push → GitHub Actions                 │
-│                   │                         │
-│        ┌──────────┴──────────┐              │
-│        │                     │              │
-│    CI Pipeline           CD Pipeline        │
-│    lint + test           build + push       │
-│                          → Docker Hub       │
-│                          → Deploy           │
-└─────────────────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────┐
-│              Production (Render)            │
-│                                             │
-│   ┌─────────────┐                           │
-│   │  Flask API  │ :5000                     │
-│   │  (Gunicorn) │                           │
-│   └─────────────┘                           │
-└─────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────┐
-│         Local Monitoring Stack              │
-│                                             │
-│   Grafana :3000 → Prometheus :9090          │
-│                       │                     │
-│               scrapes Flask API :5000       │
-│               every 15 seconds              │
-└─────────────────────────────────────────────┘
-```
+![Architecture Diagram](docs/images/infra-monitor-architecture.png)
 
 ---
 

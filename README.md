@@ -368,8 +368,6 @@ infra-monitor/
 
 🔗 **https://devops-lab-i12g.onrender.com**
 
-> ⚠️ Hosted on Render free tier — may take 30–60 seconds to wake up on first request.
-
 ```bash
 curl https://devops-lab-i12g.onrender.com/health
 curl https://devops-lab-i12g.onrender.com/metrics

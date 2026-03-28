@@ -23,7 +23,6 @@ curl https://devops-lab-i12g.onrender.com/metrics
 - [Monitoring Stack](#-monitoring-stack)
 - [CI/CD Pipeline](#-cicd-pipeline)
 - [CI/CD Setup Guide](#-cicd-setup-guide)
-- [Infrastructure as Code](#-infrastructure-as-code)
 - [Testing & Linting](#-testing--linting)
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
@@ -272,20 +271,6 @@ Once added, push any commit to `main` and watch the Actions tab.
 
 ---
 
-## 🏗️ Infrastructure as Code
-
-The Terraform configuration in `terraform/` defines the Render deployment as code.
-
-```bash
-cd terraform
-terraform init
-terraform plan   # preview what would be created
-```
-
-> ℹ️ `terraform apply` requires a **paid Render plan** (Starter or above) to use the Render API for deployment. The free tier only supports manual or webhook-based deploys. The `terraform plan` command works on free tier and validates the IaC configuration.
->
-> GCP deployment via Terraform is planned for a future release.
-
 ---
 
 ## 🧪 Testing & Linting
@@ -322,7 +307,6 @@ pytest tests/test_app.py::test_health -v
 | **GitHub Actions** | CI/CD automation |
 | **Docker Hub** | Container registry |
 | **Render** | Cloud deployment |
-| **Terraform** | Infrastructure as Code |
 
 ---
 
@@ -349,11 +333,6 @@ infra-monitor/
 │           │   └── datasource.yml          # Auto-provision Prometheus data source
 │           └── dashboards/
 │               └── dashboard-provider.yml  # Auto-provision dashboard on startup
-├── terraform/
-│   ├── main.tf                             # Render web service resource
-│   ├── variables.tf                        # Input variables
-│   ├── outputs.tf                          # Output values (URL, service ID)
-│   └── providers.tf                        # Render provider config
 ├── tests/
 │   └── test_app.py                         # Unit tests (pytest) — 17 tests
 ├── docs/
